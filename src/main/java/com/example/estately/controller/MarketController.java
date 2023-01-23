@@ -56,4 +56,9 @@ public class MarketController {
 
     //--------ADD PUT DELETE
 
+    @PostMapping("/seller/bulkload")
+    public ResponseEntity<String> addBulkLoadSeller() {
+        return ResponseEntity.ok(marketService.bulkLoadSeller(20));
+    }
+
 }

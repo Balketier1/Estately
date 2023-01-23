@@ -21,7 +21,7 @@ public class Agent {
     @JoinColumn(name = "idContact")
     private Contact contact;
 
-    @OneToMany(mappedBy = "agent")
+    @OneToMany
     @JsonIgnore
     private List<Listing> listings;
 

@@ -62,4 +62,12 @@ public class MarketService {
         return listingRepository.findListingByListingNameWithNativeQuery(listingName);
     }
 
+    public String bulkLoadSeller(int n) {
+        for(int i = 10; i < n; i++){
+            Seller seller = new Seller("Seller" + i);
+            sellerRepository.save(seller);
+        }
+        return "Seller bulkLoad Done!";
+    }
+
 }
