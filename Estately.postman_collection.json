@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "5fb28d4f-1077-4fd4-be71-1f454e4ccba3",
+		"name": "Estately",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17433226"
+	},
+	"item": [
+		{
+			"name": "GET Market",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/market",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST InsertListing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"listingName\": \"Listing No 3 (POSTMAN)\",\n    \"listingPrice\": 50000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/market/listing?listingDetailsId=3&sellerId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market",
+						"listing"
+					],
+					"query": [
+						{
+							"key": "listingDetailsId",
+							"value": "3"
+						},
+						{
+							"key": "sellerId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ListingDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"LISTING DESCRIPTION 1 (POST)\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/market/listingDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market",
+						"listingDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sellerName\": \"Seller 3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/market/seller",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market",
+						"seller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ListingByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/market/listing?listingName=Listing2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market",
+						"listing"
+					],
+					"query": [
+						{
+							"key": "listingName",
+							"value": "Listing2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST SellerBulkLoad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/market/seller/bulkload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"market",
+						"seller",
+						"bulkload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

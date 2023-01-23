@@ -41,7 +41,7 @@ public class Zone {
     }
 
     public List<Listing> getListingList() {
-        return getListingList();
+        return listingList;
     }
 
     public void setListingList(List<Listing> listingList) {
